@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <centre>
+        <h3 class="animated slideInLeft">Email Spam Classifier using Random Forest</h3>
+      </centre>
+    </header>
+
+    <div class="container">
+      <form action="{{ url_for('classify')}}" method="POST">
+        <div class="form-group">
+          <label for="classification">Enter your text here:</label>
+          <textarea class="form-control" id="classification" name="message" rows="8" cols="80" placeholder="eg: Hi, how are you?"></textarea>
+        </div>
+        <centre>
+          <button type="submit" class="btn btn-primary" value="classify">Check</button>
+        </centre>
+        <br>
+        <br>
+      </form>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

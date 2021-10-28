@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <centre>
+        <h3>Email Spam Classifier using Random Forest</h3>
+      </centre>
+    </header>
+    <div class="result">
+      {% if prediction == 'spam' %}
+      <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.seekpng.com%2Fpng%2Fdetail%2F44-446973_green-tick-clipart-benefit-green-check-mark.png&imgrefurl=https%3A%2F%2Fwww.seekpng.com%2Fipng%2Fu2q8w7u2w7i1q8t4_green-tick-clipart-benefit-green-check-mark%2F&tbnid=d0pgEyoruGKEEM&vet=12ahUKEwii3Nyw0ezzAhUOnksFHYgZB3YQMygBegUIARCvAQ..i&docid=oczZ1w08ZCIQBM&w=820&h=518&q=green%20tick&hl=en&ved=2ahUKEwii3Nyw0ezzAhUOnksFHYgZB3YQMygBegUIARCvAQ">
+      <centre>
+        <h1 id="spam">ALERT! IT'S SPAM!</h1>
+      </centre>
+      {% elif prediction == 'ham' %}
+      <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.seekpng.com%2Fpng%2Fdetail%2F44-446973_green-tick-clipart-benefit-green-check-mark.png&imgrefurl=https%3A%2F%2Fwww.seekpng.com%2Fipng%2Fu2q8w7u2w7i1q8t4_green-tick-clipart-benefit-green-check-mark%2F&tbnid=d0pgEyoruGKEEM&vet=12ahUKEwii3Nyw0ezzAhUOnksFHYgZB3YQMygBegUIARCvAQ..i&docid=oczZ1w08ZCIQBM&w=820&h=518&q=green%20tick&hl=en&ved=2ahUKEwii3Nyw0ezzAhUOnksFHYgZB3YQMygBegUIARCvAQ">
+      <centre>
+        <h1 id="ham">SAFE! IT'S NOT SPAM!</h1>
+      </centre>
+      {% endif %}
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>
