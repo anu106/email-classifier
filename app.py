@@ -7,19 +7,12 @@ from flask import Flask, render_template, request
 from flask import Flask, render_template, request, url_for
 from textblob import TextBlob
 import os
-import numpy as np
-import pandas as pd
 from collections import Counter
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from collections import Counter
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.svm import LinearSVC
-from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix, plot_confusion_matrix
-from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
 import csv
 import re
 import string
