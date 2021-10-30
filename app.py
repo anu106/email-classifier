@@ -1,26 +1,18 @@
-import numpy as np
-import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import train_test_split
-from flask import Flask, render_template, request
 from flask import Flask, render_template, request, url_for
+from flask_bootstrap import Bootstrap
 from textblob import TextBlob
-import os
-from collections import Counter
-from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import StandardScaler
-from collections import Counter
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix
-from sklearn.ensemble import RandomForestClassifier
+
 import csv
+import pandas as pd
 import re
 import string
 from nltk.corpus import stopwords
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
+
 
 application = app = Flask(__name__)
 
