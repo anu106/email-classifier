@@ -1,7 +1,3 @@
-from flask import Flask, render_template, request, url_for
-from flask_bootstrap import Bootstrap
-from textblob import TextBlob
-
 import csv
 import pandas as pd
 import re
@@ -12,7 +8,9 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, T
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
-
+from flask import Flask, render_template, request, url_for
+from flask_bootstrap import Bootstrap
+from textblob import TextBlob
 
 application = app = Flask(__name__)
 
